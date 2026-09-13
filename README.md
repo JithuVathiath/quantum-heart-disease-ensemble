@@ -16,7 +16,7 @@ This repository asks a harder question than “what is the highest accuracy?” 
 
 ## Open the Evidence
 
-- **Interactive explorer:** available through GitHub Pages after publication
+- **Interactive explorer:** [launch the Quantum Heart Evidence Explorer](https://jithuvathiath.github.io/quantum-heart-disease-ensemble/)
 - **Generated report:** [Reproduction Benchmark Results](reports/results.md)
 - **Versioned result artefact:** [`artifacts/public/results.json`](artifacts/public/results.json)
 - **Associated paper:** [IEEE DOI 10.1109/ICITIIT64777.2025.11041018](https://doi.org/10.1109/ICITIIT64777.2025.11041018)
