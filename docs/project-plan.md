@@ -4,7 +4,7 @@
 
 **Classification:** Flagship research project  
 **Primary signal:** Quantum machine learning, rigorous evaluation, explainability, and reproducible research  
-**Academic link:** Bachelor's minor project and IEEE ICITIIT 2025 publication  
+**Academic link:** Bachelor's Major Project at SRM Institute of Science and Technology and IEEE ICITIIT 2025 publication
 **Distinct from existing work:** The product is a rigorous quantum-kernel reproduction study, not a clinical prediction form or a single-metric classroom notebook.
 
 ## Product Concept

@@ -7,6 +7,10 @@
 
 A research-grade companion to the 2025 IEEE ICITIIT paper **"Prediction of Cardiac Disease Using Quantum Enhanced Ensemble Learning Approach"** by Jithu Vathiath Biju, Adithya P. Mallya, and P. Kirubanantham.
 
+> **Academic Designation:** Bachelor's Major Project — SRM Institute of Science and Technology
+>
+> **Published Research:** [ResearchGate](https://www.researchgate.net/publication/393118567_Prediction_of_Cardiac_Disease_Using_Quantum_Enhanced_Ensemble_Learning_Approach) · [IEEE DOI 10.1109/ICITIIT64777.2025.11041018](https://doi.org/10.1109/ICITIIT64777.2025.11041018)
+
 This repository asks a harder question than “what is the highest accuracy?” It tests whether a bagged quantum-kernel classifier remains convincing under leakage-safe preprocessing, paired uncertainty, a compute-matched classical baseline, and cross-hospital dataset shift.
 
 > **Headline result:** Under the frozen reference protocol, the bagged quantum-kernel SVC reached **0.661 ROC AUC**, trailing the four-component RBF-SVC by **0.194** (95% paired bootstrap interval: -0.256 to -0.133). Logistic regression led the complete benchmark at **0.895 ROC AUC**. No quantum advantage was demonstrated.
@@ -17,7 +21,8 @@ This repository asks a harder question than “what is the highest accuracy?” 
 - **Technical report:** [Quantum-Enhanced Heart Disease Benchmark](reports/technical-report.md)
 - **Generated results summary:** [Reproduction Benchmark Results](reports/results.md)
 - **Versioned result artefact:** [`artifacts/public/results.json`](artifacts/public/results.json)
-- **Associated paper:** [IEEE DOI 10.1109/ICITIIT64777.2025.11041018](https://doi.org/10.1109/ICITIIT64777.2025.11041018)
+- **ResearchGate paper:** [Prediction of Cardiac Disease Using Quantum Enhanced Ensemble Learning Approach](https://www.researchgate.net/publication/393118567_Prediction_of_Cardiac_Disease_Using_Quantum_Enhanced_Ensemble_Learning_Approach)
+- **IEEE publication:** [DOI 10.1109/ICITIIT64777.2025.11041018](https://doi.org/10.1109/ICITIIT64777.2025.11041018)
 - **Dataset:** [UCI Heart Disease, DOI 10.24432/C52P4X](https://doi.org/10.24432/C52P4X)
 
 ## Published Result Versus New Evidence

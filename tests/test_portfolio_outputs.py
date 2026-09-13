@@ -30,6 +30,8 @@ def test_notebook_uses_aggregate_artefact_and_has_research_boundary() -> None:
     assert "90.16%" in content
     assert "not claimed as reproduced" in content
     assert "No Quantum Advantage Was Demonstrated" in content
+    assert "Bachelor's Major Project" in content
+    assert "researchgate.net/publication/393118567" in content
 
 
 def test_technical_report_contains_traceable_results() -> None:
@@ -40,3 +42,5 @@ def test_technical_report_contains_traceable_results() -> None:
     assert "0.895 ROC AUC" in report
     assert "does not\ndemonstrate a quantum advantage" in report
     assert "for research, education, and portfolio demonstration only" in report
+    assert "SRM Institute of Science and Technology" in report
+    assert "researchgate.net/publication/393118567" in report

@@ -9,6 +9,11 @@ version: 0.1.0
 date-released: 2026-09-13
 license: MIT
 repository-code: "https://github.com/JithuVathiath/quantum-heart-disease-ensemble"
+keywords:
+  - "Bachelor's Major Project"
+  - "SRM Institute of Science and Technology"
+  - "quantum machine learning"
+  - "heart disease"
 references:
   - type: conference-paper
     title: "Prediction of Cardiac Disease Using Quantum Enhanced Ensemble Learning Approach"
@@ -21,3 +26,4 @@ references:
         given-names: "P."
     year: 2025
     doi: "10.1109/ICITIIT64777.2025.11041018"
+    url: "https://www.researchgate.net/publication/393118567_Prediction_of_Cardiac_Disease_Using_Quantum_Enhanced_Ensemble_Learning_Approach"

@@ -40,6 +40,12 @@ def build_notebook() -> nbformat.NotebookNode:
             competitive under leakage-safe preprocessing, paired uncertainty, a compute-matched
             classical baseline, and cross-hospital dataset shift.
 
+            **Academic designation:** Bachelor's Major Project — SRM Institute of Science and
+            Technology
+
+            **Published paper:** [ResearchGate](https://www.researchgate.net/publication/393118567_Prediction_of_Cardiac_Disease_Using_Quantum_Enhanced_Ensemble_Learning_Approach)
+            · [IEEE DOI](https://doi.org/10.1109/ICITIIT64777.2025.11041018)
+
             > **Research boundary:** The paper-reported accuracy of **90.16%** is historical
             > publication context. It is not claimed as reproduced here. Every new result in this
             > notebook comes from the repository's frozen reference protocol.
@@ -411,7 +417,10 @@ def build_notebook() -> nbformat.NotebookNode:
             Dataset: UCI Heart Disease, DOI
             [10.24432/C52P4X](https://doi.org/10.24432/C52P4X), CC BY 4.0.  
             Associated paper: IEEE DOI
-            [10.1109/ICITIIT64777.2025.11041018](https://doi.org/10.1109/ICITIIT64777.2025.11041018).
+            [10.1109/ICITIIT64777.2025.11041018](https://doi.org/10.1109/ICITIIT64777.2025.11041018)
+
+            ResearchGate publication:
+            [Prediction of Cardiac Disease Using Quantum Enhanced Ensemble Learning Approach](https://www.researchgate.net/publication/393118567_Prediction_of_Cardiac_Disease_Using_Quantum_Enhanced_Ensemble_Learning_Approach).
             """
         ),
     ]

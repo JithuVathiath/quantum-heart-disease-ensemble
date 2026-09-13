@@ -1,9 +1,11 @@
 # Quantum-Enhanced Heart Disease Ensemble: Technical Report
 
 **Report status:** Generated from the versioned public evidence artefact  
+**Academic designation:** Bachelor's Major Project — SRM Institute of Science and Technology<br>
 **Experiment:** `cleveland-reference-v1`  
 **Artefact SHA-256:** `f672dbec410768b5b3b5cd2db9cbb049b234650c82192826f77ee81610f731ac`  
 **Associated paper:** [IEEE DOI 10.1109/ICITIIT64777.2025.11041018](https://doi.org/10.1109/ICITIIT64777.2025.11041018)  
+**ResearchGate:** [Prediction of Cardiac Disease Using Quantum Enhanced Ensemble Learning Approach](https://www.researchgate.net/publication/393118567_Prediction_of_Cardiac_Disease_Using_Quantum_Enhanced_Ensemble_Learning_Approach)<br>
 **Dataset:** [UCI Heart Disease, DOI 10.24432/C52P4X](https://doi.org/10.24432/C52P4X), CC BY 4.0
 
 ## Executive Summary

@@ -109,9 +109,11 @@ def build_report(evidence: dict[str, Any]) -> str:
     return f"""# Quantum-Enhanced Heart Disease Ensemble: Technical Report
 
 **Report status:** Generated from the versioned public evidence artefact  
+**Academic designation:** Bachelor's Major Project — SRM Institute of Science and Technology<br>
 **Experiment:** `{experiment["experiment_id"]}`  
 **Artefact SHA-256:** `{evidence["artefact_sha256"]}`  
 **Associated paper:** [IEEE DOI {evidence["publication_context"]["doi"]}](https://doi.org/{evidence["publication_context"]["doi"]})  
+**ResearchGate:** [Prediction of Cardiac Disease Using Quantum Enhanced Ensemble Learning Approach](https://www.researchgate.net/publication/393118567_Prediction_of_Cardiac_Disease_Using_Quantum_Enhanced_Ensemble_Learning_Approach)<br>
 **Dataset:** [UCI Heart Disease, DOI {evidence["dataset"]["dataset_doi"]}](https://doi.org/{evidence["dataset"]["dataset_doi"]}), {evidence["dataset"]["licence"]}
 
 ## Executive Summary
