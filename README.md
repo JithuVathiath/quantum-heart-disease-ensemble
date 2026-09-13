@@ -1,7 +1,6 @@
 # Quantum-Enhanced Heart Disease Ensemble
 
 [![Quality](https://github.com/JithuVathiath/quantum-heart-disease-ensemble/actions/workflows/quality.yml/badge.svg)](https://github.com/JithuVathiath/quantum-heart-disease-ensemble/actions/workflows/quality.yml)
-[![Pages](https://github.com/JithuVathiath/quantum-heart-disease-ensemble/actions/workflows/pages.yml/badge.svg)](https://github.com/JithuVathiath/quantum-heart-disease-ensemble/actions/workflows/pages.yml)
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-14766d)](https://www.python.org/)
 [![Qiskit 2.5](https://img.shields.io/badge/Qiskit-2.5-e36f55)](https://www.ibm.com/quantum/qiskit)
 [![Data: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-e5ba58)](https://archive.ics.uci.edu/dataset/45/heart%2Bdisease)
@@ -10,14 +9,13 @@ A research-grade companion to the 2025 IEEE ICITIIT paper **"Prediction of Cardi
 
 This repository asks a harder question than “what is the highest accuracy?” It tests whether a bagged quantum-kernel classifier remains convincing under leakage-safe preprocessing, paired uncertainty, a compute-matched classical baseline, and cross-hospital dataset shift.
 
-> **Headline result:** under the frozen reference protocol, the bagged quantum-kernel SVC reached **0.661 ROC AUC**, trailing the four-component RBF-SVC by **0.194** (95% paired bootstrap interval: -0.256 to -0.133). Logistic regression led the complete benchmark at **0.895 ROC AUC**. No quantum advantage was demonstrated.
+> **Headline result:** Under the frozen reference protocol, the bagged quantum-kernel SVC reached **0.661 ROC AUC**, trailing the four-component RBF-SVC by **0.194** (95% paired bootstrap interval: -0.256 to -0.133). Logistic regression led the complete benchmark at **0.895 ROC AUC**. No quantum advantage was demonstrated.
 
-![Quantum Heart Evidence Explorer](docs/explorer-preview.png)
+## Explore the Evidence
 
-## Open the Evidence
-
-- **Interactive explorer:** [launch the Quantum Heart Evidence Explorer](https://jithuvathiath.github.io/quantum-heart-disease-ensemble/)
-- **Generated report:** [Reproduction Benchmark Results](reports/results.md)
+- **Executed notebook:** [Quantum Heart Disease Reproduction](notebooks/quantum_heart_disease_reproduction.ipynb)
+- **Technical report:** [Quantum-Enhanced Heart Disease Benchmark](reports/technical-report.md)
+- **Generated results summary:** [Reproduction Benchmark Results](reports/results.md)
 - **Versioned result artefact:** [`artifacts/public/results.json`](artifacts/public/results.json)
 - **Associated paper:** [IEEE DOI 10.1109/ICITIIT64777.2025.11041018](https://doi.org/10.1109/ICITIIT64777.2025.11041018)
 - **Dataset:** [UCI Heart Disease, DOI 10.24432/C52P4X](https://doi.org/10.24432/C52P4X)
@@ -47,21 +45,20 @@ Values are five-fold out-of-fold estimates on 303 Cleveland records. Intervals u
 - **Quantum observability:** kernel alignment, eigenvalue spectrum proxies, effective rank, qubit count, and kernel time are retained per fold.
 - **Transportability stress test:** models are trained and tested across four UCI hospital cohorts with sharply different missingness and prevalence.
 - **Probability quality:** calibration, Brier score, threshold errors, and subgroup slices accompany ranking metrics.
-- **No diagnosis theatre:** the public application explores evidence; it never asks for patient details or emits a medical decision.
+- **No diagnosis theatre:** The notebook analyses aggregate research evidence; it never asks for patient details or emits a medical decision.
 - **Traceable outputs:** dataset hashes, seeds, configuration, environment, code revision, and artefact fingerprint are recorded.
 
 ## Architecture
 
 ![System architecture](docs/architecture.svg)
 
-The Python research engine produces aggregate, patient-safe JSON evidence. The static TypeScript explorer consumes that versioned artefact and can be hosted on GitHub Pages without a clinical prediction API or permanent backend.
+The Python research engine produces aggregate, patient-safe JSON evidence. The executed notebook and generated technical report consume that versioned artefact, so every displayed number remains traceable without exposing patient-level records.
 
 ## Reproduce the Benchmark
 
 ### Requirements
 
 - Python 3.12
-- Node.js 22 and pnpm 11 for the explorer
 - Approximately 2 GB of free environment space
 
 ### Setup and data
@@ -69,7 +66,7 @@ The Python research engine produces aggregate, patient-safe JSON evidence. The s
 ```bash
 python3.12 -m venv .venv
 source .venv/bin/activate
-pip install -e '.[dev,quantum]'
+pip install -e '.[dev,notebook,quantum]'
 qheart data download --data-dir data
 qheart data profile --data-dir data
 ```
@@ -85,34 +82,40 @@ qheart benchmark \
   --output artifacts/public/results.json \
   --report reports/results.md
 
-python scripts/sync_explorer_results.py
-ruff check src tests
+python scripts/build_technical_report.py
+python scripts/build_notebook.py --execute
+python scripts/validate_public_artifact.py artifacts/public/results.json
+ruff check src tests scripts
 mypy src
 pytest --cov=qheart
 ```
 
-### Run the explorer
+The notebook can also be opened directly in VS Code, JupyterLab, or GitHub's notebook viewer. Its committed outputs are generated entirely from the aggregate JSON artefact, so opening it does not require the raw UCI files.
+
+### Open the Notebook Locally
+
+Open `notebooks/quantum_heart_disease_reproduction.ipynb` directly in VS Code, or click the
+notebook link above to use GitHub's built-in renderer. For JupyterLab, install it in the project
+environment and launch the notebook:
 
 ```bash
-cd apps/explorer
-pnpm install --frozen-lockfile
-pnpm test
-pnpm build
-pnpm preview
+pip install jupyterlab
+jupyter lab notebooks/quantum_heart_disease_reproduction.ipynb
 ```
 
-Open the local address printed by Vite. Select models in the calibration, transportability, and subgroup panels; use the `?` button for the in-app guide.
+JupyterLab is optional and is not required by the automated build.
 
 ## Repository Map
 
 ```text
-apps/explorer/          TypeScript evidence explorer and browser tests
 artifacts/public/       Aggregate, versioned result artefact
 configs/                Frozen experiment configuration
 data/manifest.json      Dataset source and file hashes; no patient rows
 docs/                   Protocol, data card, model card, architecture, ethics
+notebooks/              Executed analysis notebook and portfolio figures
 reports/results.md      Generated benchmark report
-scripts/                Artefact validation and explorer synchronisation
+reports/technical-report.md  Comprehensive technical interpretation
+scripts/                Artefact validation and document generation
 src/qheart/             Data, modelling, evaluation, quantum, and reporting code
 tests/                   Unit, integration, determinism, and Qiskit tests
 ```

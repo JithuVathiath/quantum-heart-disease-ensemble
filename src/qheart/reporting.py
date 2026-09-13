@@ -107,7 +107,7 @@ def write_markdown_report(payload: dict[str, Any], path: str | Path) -> None:
             "## Interpretation Boundary",
             "",
             "Performance on these small historical cohorts does not establish clinical utility,",
-            "causal validity, safety, or transportability. The explorer exposes uncertainty,",
+            "causal validity, safety, or transportability. The report exposes uncertainty,",
             "cohort shift, subgroup support, and compute cost so that a single accuracy value is",
             "never the whole conclusion.",
             "",

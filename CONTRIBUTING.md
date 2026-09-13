@@ -13,13 +13,12 @@ Contributions that improve reproducibility, accessibility, validation design, qu
 ## Local Quality Gate
 
 ```bash
-ruff check src tests
+ruff check src tests scripts
 mypy src
 pytest --cov=qheart
-cd apps/explorer
-pnpm test
-pnpm build
-pnpm test:e2e
+python scripts/validate_public_artifact.py artifacts/public/results.json
+python scripts/build_technical_report.py
+python scripts/build_notebook.py --execute
 ```
 
 Changes to displayed metrics must include the configuration fingerprint, output fingerprint, environment record, and an explanation in the pull request.

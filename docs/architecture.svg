@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="720" viewBox="0 0 1400 720" role="img" aria-labelledby="title desc">
   <title id="title">Quantum Heart system architecture</title>
-  <desc id="desc">Flow from licensed UCI cohorts through validation, classical and quantum benchmark tracks, aggregate evidence, and the public explorer.</desc>
+  <desc id="desc">Flow from licensed UCI cohorts through validation, classical and quantum benchmark tracks, aggregate evidence, an executed notebook, and a technical report.</desc>
   <defs>
     <style>
       .bg{fill:#f4efe6}.navy{fill:#112c35}.paper{fill:#fffaf1}.teal{fill:#14766d}.coral{fill:#e36f55}.yellow{fill:#e5ba58}.line{stroke:#9fa7a5;stroke-width:2;fill:none}.dash{stroke-dasharray:8 8}.h{font:500 34px Georgia,serif;fill:#17242b}.k{font:800 13px Arial,sans-serif;letter-spacing:2px;fill:#14766d}.t{font:500 20px Georgia,serif;fill:#17242b}.s{font:400 14px Arial,sans-serif;fill:#627078}.light{fill:#f9f2e7}.mutedlight{fill:#b9c5c2}.mono{font:700 12px monospace;fill:#17242b}
@@ -35,10 +35,10 @@
   <g transform="translate(1060 180)">
     <rect class="paper" width="270" height="410" rx="20" stroke="#c9c2b7"/>
     <circle class="coral" cx="45" cy="48" r="8"/><text class="k" x="67" y="53">PUBLIC OUTPUT</text>
-    <text class="t" x="30" y="105">Evidence Explorer</text><text class="s" x="30" y="134">No patient prediction API</text>
+    <text class="t" x="30" y="105">Research Deliverables</text><text class="s" x="30" y="134">No patient-level records</text>
     <g transform="translate(30 170)"><rect fill="#e8dfd0" width="210" height="54" rx="8"/><text class="mono" x="16" y="23">results.json</text><text class="s" x="16" y="42" font-size="11">aggregate + fingerprinted</text></g>
     <g transform="translate(30 240)"><rect fill="#e8dfd0" width="210" height="54" rx="8"/><text class="mono" x="16" y="23">results.md</text><text class="s" x="16" y="42" font-size="11">generated evidence report</text></g>
-    <g transform="translate(30 310)"><rect class="coral" width="210" height="54" rx="8"/><text class="light" x="16" y="32" font-family="Arial" font-size="14">Interactive GitHub Pages</text></g>
+    <g transform="translate(30 310)"><rect class="coral" width="210" height="54" rx="8"/><text class="light" x="16" y="23" font-family="Arial" font-size="14">Executed Notebook</text><text class="light" x="16" y="42" font-family="Arial" font-size="12">+ Technical Report</text></g>
   </g>
   <path class="line dash" d="M380 630H1000"/><text class="s" x="690" y="665">Every result carries data hash · seed · configuration · environment · code revision</text>
 </svg>

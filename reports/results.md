@@ -30,7 +30,7 @@ Bagged quantum-kernel SVC minus compute-matched RBF-SVC ROC AUC: **-0.194** (95%
 ## Interpretation Boundary
 
 Performance on these small historical cohorts does not establish clinical utility,
-causal validity, safety, or transportability. The explorer exposes uncertainty,
+causal validity, safety, or transportability. The report exposes uncertainty,
 cohort shift, subgroup support, and compute cost so that a single accuracy value is
 never the whole conclusion.
 

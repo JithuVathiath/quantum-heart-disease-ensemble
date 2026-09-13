@@ -10,10 +10,6 @@ __pycache__/
 .coverage
 coverage.xml
 htmlcov/
-node_modules/
-dist/
-test-results/
-playwright-report/
 data/raw/
 data/interim/
 artifacts/cache/

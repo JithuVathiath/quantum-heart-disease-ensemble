@@ -5,18 +5,18 @@
 **Classification:** Flagship research project  
 **Primary signal:** Quantum machine learning, rigorous evaluation, explainability, and reproducible research  
 **Academic link:** Bachelor's minor project and IEEE ICITIIT 2025 publication  
-**Distinct from existing work:** The product is a quantum-kernel research observatory, not another tabular classification notebook or clinical prediction form.
+**Distinct from existing work:** The product is a rigorous quantum-kernel reproduction study, not a clinical prediction form or a single-metric classroom notebook.
 
 ## Product Concept
 
-Build a reproducible experiment system and public visual explorer that answers four questions:
+Build a reproducible experiment system, an executed analysis notebook, and a technical report that answer four questions:
 
 1. Can the reported quantum-enhanced approach be reproduced under a fully documented protocol?
 2. Does it outperform strong, compute-aware classical baselines beyond split-to-split uncertainty?
 3. How sensitive is the conclusion to feature reduction, feature maps, seeds, cohort choice, and missing-data policy?
 4. Does performance transfer between hospital cohorts, or is it specific to Cleveland?
 
-The interface will focus on research evidence. It will not solicit patient information or display a diagnosis.
+The deliverables focus on aggregate research evidence. They do not solicit patient information or display a diagnosis.
 
 ## Technical Architecture
 
@@ -29,7 +29,7 @@ The interface will focus on research evidence. It will not solicit patient infor
 - classical and quantum-kernel model adapters
 - repeated stratified validation and hospital-held-out evaluation
 - probability calibration, bootstrap confidence intervals, subgroup slices, and paired comparisons
-- structured JSON/Parquet artefacts consumed by reports and the web explorer
+- structured JSON artefacts consumed by the notebook and reports
 
 ### Quantum Track
 
@@ -50,18 +50,17 @@ The interface will focus on research evidence. It will not solicit patient infor
 
 Classical models will receive the same training folds and evaluation protocol. Hyperparameter searches will be bounded and nested where used.
 
-### Interactive Evidence Explorer
+### Notebook and Report
 
-- TypeScript-based static web application suitable for GitHub Pages
+- executed Python notebook that reads the versioned aggregate artefact
 - experiment overview and paper-versus-reproduction boundary
-- cohort and missingness explorer
-- model leaderboard with uncertainty rather than single-score ranking
-- calibration, threshold, subgroup, and error-analysis panels
-- quantum kernel heatmap and spectrum viewer
-- compute-cost versus performance comparison
-- reproducibility manifest and limitations drawer
+- cohort and missingness profiles
+- model leaderboard and confidence-interval forest plot
+- calibration, subgroup, and transportability analysis
+- quantum-kernel diagnostics and compute-cost interpretation
+- comprehensive technical report with reproducibility manifest and limitations
 
-The public application will read generated, versioned artefacts and therefore will not require a permanent backend.
+The notebook can be reviewed directly on GitHub and reproduced without a web server or patient-level data.
 
 ## Evaluation Design
 
@@ -104,11 +103,11 @@ The public application will read generated, versioned artefacts and therefore wi
 
 ```text
 quantum-heart-disease-ensemble/
-|-- apps/explorer/              # Public TypeScript evidence explorer
 |-- configs/                    # Versioned experiment definitions
 |-- data/                       # Ignored raw data and documented sample metadata
 |-- docs/                       # Protocol, ethics, architecture, and results
-|-- reports/                    # Generated benchmark report and figures
+|-- notebooks/                  # Executed research notebook
+|-- reports/                    # Generated benchmark and technical reports
 |-- scripts/                    # Reproducible acquisition and benchmark commands
 |-- src/qheart/                 # Research engine
 |-- tests/                      # Unit, integration, determinism, and data-contract tests
@@ -150,13 +149,14 @@ quantum-heart-disease-ensemble/
 - implement model-appropriate explanations;
 - document limitations and threats to validity.
 
-### Phase 5 - Public Product
+### Phase 5 - Portfolio Publication
 
-- build the evidence explorer;
+- build and execute the analysis notebook;
+- generate the comprehensive technical report;
 - add architecture and recruiter-ready visuals;
 - add Docker, CI, release metadata, citation, and contributor documentation;
 - run the full publication gate;
-- publish the repository and GitHub Pages site only after all checks pass.
+- publish the repository only after all checks pass.
 
 ## Publication Gate
 
@@ -167,10 +167,10 @@ The repository must not be published until:
 - raw data is either excluded or redistributed strictly under its licence with attribution;
 - deterministic smoke tests and the complete classical benchmark pass;
 - the quantum path passes on the documented supported environment;
-- the explorer builds and its critical journeys pass browser tests;
-- no patient-level input or clinical-use implication appears in the interface;
+- the notebook executes from the committed aggregate artefact without errors;
+- the notebook and report contain no patient-level input or clinical-use implication;
 - CI, security checks, licence, citation, limitations, and run instructions are complete.
 
 ## Definition of Done
 
-A recruiter can open the live explorer, understand the research question in under one minute, inspect honest comparative evidence, trace any result to an experiment manifest, and reproduce at least the reference benchmark from documented commands.
+A recruiter can open the notebook or report, understand the research question in under one minute, inspect honest comparative evidence, trace every result to an experiment manifest, and reproduce the reference benchmark from documented commands.

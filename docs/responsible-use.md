@@ -2,7 +2,7 @@
 
 ## Core Boundary
 
-Quantum Heart is an evidence explorer, not a healthcare product. It intentionally provides no patient-input form, no individual risk estimate, and no diagnostic recommendation.
+Quantum Heart is a reproducibility study, not a healthcare product. It intentionally provides no patient-input workflow, no individual risk estimate, and no diagnostic recommendation.
 
 ## Why This Matters
 

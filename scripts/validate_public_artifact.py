@@ -1,4 +1,4 @@
-"""Validate that the committed explorer artefact is aggregate and internally consistent."""
+"""Validate that the committed evidence artefact is aggregate and internally consistent."""
 
 from __future__ import annotations
 

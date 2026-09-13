@@ -1,7 +1,6 @@
 .git
 .github
 .venv
-apps
 artifacts
 data
 docs
@@ -9,6 +8,3 @@ reports
 tests
 **/__pycache__
 **/.pytest_cache
-**/node_modules
-**/dist
-
