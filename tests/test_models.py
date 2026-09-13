@@ -74,4 +74,3 @@ def test_quantum_oof_benchmark_is_complete(synthetic_frame) -> None:
     assert len(result.diagnostics) == 2
     assert len(result.folds) == 4
     assert all(np.isfinite(score).all() for score in result.probabilities.values())
-

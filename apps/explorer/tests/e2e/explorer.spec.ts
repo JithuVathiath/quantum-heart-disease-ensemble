@@ -27,4 +27,3 @@ test("remains usable on a mobile viewport", async ({ page }) => {
   await expect(page.getByRole("heading", { name: /One Published Result/ })).toBeVisible();
   await expect(page.getByRole("button", { name: "Open instructions" })).toBeVisible();
 });
-

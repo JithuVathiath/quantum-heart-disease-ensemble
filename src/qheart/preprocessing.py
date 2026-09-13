@@ -57,4 +57,3 @@ def quantum_preprocessor(feature_count: int) -> Pipeline:
             ("angles", MinMaxScaler(feature_range=(0.0, float(np.pi)))),
         ]
     )
-

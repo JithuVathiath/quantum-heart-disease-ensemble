@@ -46,4 +46,3 @@ export function signed(value: number, digits = 3): string {
 export function shortHash(value: string): string {
   return value.slice(0, 12);
 }
-

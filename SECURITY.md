@@ -17,4 +17,3 @@ Include the affected revision, reproduction steps using synthetic or public-safe
 - The project requires no API key for the reference statevector benchmark.
 - Do not commit IBM Quantum credentials or other tokens.
 - ZIP extraction validates destination paths before writing files.
-

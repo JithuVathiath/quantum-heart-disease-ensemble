@@ -21,4 +21,3 @@ USER researcher
 
 ENTRYPOINT ["qheart"]
 CMD ["--help"]
-

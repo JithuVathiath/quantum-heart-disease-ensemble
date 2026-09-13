@@ -62,4 +62,3 @@ Every benchmark artefact will include:
 - software and hardware environment;
 - runtime and peak-memory estimates;
 - output hashes and code revision.
-

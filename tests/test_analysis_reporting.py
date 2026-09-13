@@ -52,4 +52,3 @@ def test_result_and_report_writers_create_traceable_outputs(tmp_path) -> None:
     assert written["artefact_sha256"] == fingerprint
     assert "Model Evidence" in report.read_text(encoding="utf-8")
     assert canonical_hash({"a": 1}) == canonical_hash({"a": 1})
-

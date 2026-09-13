@@ -112,4 +112,3 @@ export type Results = {
   quantum_diagnostics: QuantumDiagnostic[];
   limitations: string[];
 };
-

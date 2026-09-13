@@ -48,4 +48,3 @@ describe("accessible SVG charts", () => {
     ).toContain("F1");
   });
 });
-

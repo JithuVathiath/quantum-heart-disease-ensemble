@@ -169,4 +169,3 @@ def public_data_profile(cohorts: dict[str, pd.DataFrame]) -> dict[str, Any]:
         "total_rows": sum(item["rows"] for item in profiles),
         "feature_count": len(FEATURES),
     }
-

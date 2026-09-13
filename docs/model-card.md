@@ -57,4 +57,3 @@ The public artefact includes balanced accuracy, sensitivity, specificity, precis
 ## Monitoring
 
 There is no deployed prediction service to monitor. Reproducibility is controlled through fixed configuration, file hashes, environment versions, automated tests, and a public artefact fingerprint.
-

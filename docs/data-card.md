@@ -49,4 +49,3 @@ Missingness is not uniform. The `ca` and `thal` fields are largely absent outsid
 Raw records and extracted files are excluded from Git. The repository distributes only source and licence metadata, cryptographic file hashes, aggregate cohort profiles, and aggregate model evaluation artefacts.
 
 Users retrieve the source directly from UCI and remain responsible for observing CC BY 4.0 attribution requirements.
-

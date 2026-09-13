@@ -174,4 +174,3 @@ The repository must not be published until:
 ## Definition of Done
 
 A recruiter can open the live explorer, understand the research question in under one minute, inspect honest comparative evidence, trace any result to an experiment manifest, and reproduce at least the reference benchmark from documented commands.
-

@@ -8,4 +8,3 @@
 - Added calibration, subgroup, paired-bootstrap, and transportability evidence.
 - Added a static TypeScript evidence explorer with desktop and mobile browser tests.
 - Added reproducibility, data, model, responsible-use, security, and contribution documentation.
-

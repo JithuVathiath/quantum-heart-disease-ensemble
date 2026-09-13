@@ -84,4 +84,3 @@ export function kernelChart(rows: QuantumDiagnostic[]): string {
       .join("")}
   </svg>`;
 }
-

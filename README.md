@@ -1,44 +1,134 @@
 # Quantum-Enhanced Heart Disease Ensemble
 
-An open, reproducible research companion to the 2025 IEEE ICITIIT paper **"Prediction of Cardiac Disease Using Quantum Enhanced Ensemble Learning Approach"** by Jithu Vathiath Biju, Adithya P. Mallya, and P. Kirubanantham.
+[![Quality](https://github.com/JithuVathiath/quantum-heart-disease-ensemble/actions/workflows/quality.yml/badge.svg)](https://github.com/JithuVathiath/quantum-heart-disease-ensemble/actions/workflows/quality.yml)
+[![Pages](https://github.com/JithuVathiath/quantum-heart-disease-ensemble/actions/workflows/pages.yml/badge.svg)](https://github.com/JithuVathiath/quantum-heart-disease-ensemble/actions/workflows/pages.yml)
+[![Python 3.12](https://img.shields.io/badge/Python-3.12-14766d)](https://www.python.org/)
+[![Qiskit 2.5](https://img.shields.io/badge/Qiskit-2.5-e36f55)](https://www.ibm.com/quantum/qiskit)
+[![Data: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-e5ba58)](https://archive.ics.uci.edu/dataset/45/heart%2Bdisease)
 
-This project will evaluate when a bagged quantum-kernel classifier helps, when it does not, and how stable its conclusions remain across validation designs and hospital cohorts. It is a research and education project, not a clinical diagnostic tool.
+A research-grade companion to the 2025 IEEE ICITIIT paper **"Prediction of Cardiac Disease Using Quantum Enhanced Ensemble Learning Approach"** by Jithu Vathiath Biju, Adithya P. Mallya, and P. Kirubanantham.
 
-## Why This Repository Exists
+This repository asks a harder question than “what is the highest accuracy?” It tests whether a bagged quantum-kernel classifier remains convincing under leakage-safe preprocessing, paired uncertainty, a compute-matched classical baseline, and cross-hospital dataset shift.
 
-The original undergraduate study reported 90.16% accuracy on the Cleveland heart-disease dataset using a Quantum Support Vector Classifier ensemble and SHAP-based interpretation. This repository will keep that published result visibly separate from all newly executed results while providing:
+> **Headline result:** under the frozen reference protocol, the bagged quantum-kernel SVC reached **0.661 ROC AUC**, trailing the four-component RBF-SVC by **0.194** (95% paired bootstrap interval: -0.256 to -0.133). Logistic regression led the complete benchmark at **0.895 ROC AUC**. No quantum advantage was demonstrated.
 
-- a leakage-safe reproduction protocol;
-- transparent classical and quantum-kernel baselines;
-- uncertainty, calibration, subgroup, and error analysis;
-- cross-hospital generalisation experiments;
-- compute-cost and kernel-quality evidence;
-- an interactive experiment explorer;
-- tested commands, containers, continuous integration, and traceable artefacts.
+![Quantum Heart Evidence Explorer](docs/explorer-preview.png)
 
-## Planned Research Tracks
+## Open the Evidence
 
-1. **Published Study Context** - accurately document the paper, authorship, dataset, reported method, and reported result.
-2. **Cleveland Reproduction** - execute a preregistered, leakage-safe benchmark on the Cleveland cohort.
-3. **Cross-Hospital Stress Test** - evaluate transportability across the Cleveland, Hungarian, Switzerland, and Long Beach VA cohorts where data quality permits.
-4. **Quantum Kernel Observatory** - inspect feature maps, kernel matrices, alignment, effective dimension, runtime, and sensitivity to noise or sampling.
-5. **Evidence Explorer** - compare models, folds, cohorts, uncertainty intervals, calibration, subgroup slices, explanations, and compute cost in a public web interface.
+- **Interactive explorer:** available through GitHub Pages after publication
+- **Generated report:** [Reproduction Benchmark Results](reports/results.md)
+- **Versioned result artefact:** [`artifacts/public/results.json`](artifacts/public/results.json)
+- **Associated paper:** [IEEE DOI 10.1109/ICITIIT64777.2025.11041018](https://doi.org/10.1109/ICITIIT64777.2025.11041018)
+- **Dataset:** [UCI Heart Disease, DOI 10.24432/C52P4X](https://doi.org/10.24432/C52P4X)
 
-## Evidence Boundary
+## Published Result Versus New Evidence
 
-The published 90.16% accuracy is a historical paper result. It will not be presented as a newly reproduced result unless the exact protocol is executed successfully. New experiments will have their own versioned manifests, seeds, data hashes, environment details, and generated reports.
+The associated paper reported **90.16% accuracy** on the Cleveland dataset. That number is historical publication context. It is not presented as reproduced here because the exact original split and implementation artefacts are not available in this repository.
 
-## Data
+All results below were generated independently from the declared reference protocol:
 
-The project will use the UCI Heart Disease dataset (DOI: `10.24432/C52P4X`), which is licensed under CC BY 4.0. Raw downloads will remain outside Git history; the repository will provide a documented, checksum-verified acquisition step and attribution.
+| Model | Track | ROC AUC (95% CI) | Balanced Accuracy | Brier | Runtime |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Logistic regression | Classical | **0.895** (0.858-0.928) | 0.809 | **0.129** | 0.04 s |
+| Extra Trees | Classical | 0.893 (0.858-0.926) | **0.821** | 0.132 | 0.88 s |
+| RBF-SVC, full representation | Classical | 0.881 (0.838-0.916) | 0.813 | 0.136 | 0.06 s |
+| Gradient boosting | Classical | 0.869 (0.825-0.908) | 0.784 | 0.155 | 1.59 s |
+| RBF-SVC, four components | Matched classical | 0.856 (0.811-0.897) | 0.785 | 0.152 | 0.06 s |
+| Bagged quantum-kernel SVC | Quantum | 0.661 (0.605-0.721) | 0.598 | 0.235 | 1.63 s |
+| Quantum-kernel SVC | Quantum | 0.647 (0.586-0.710) | 0.596 | 0.232 | 1.54 s |
 
-## Current Status
+Values are five-fold out-of-fold estimates on 303 Cleveland records. Intervals use 1,000 deterministic bootstrap resamples. Runtime is environment-specific and includes kernel construction for quantum models.
 
-The research protocol and delivery plan are being established locally. The repository will remain unpublished until its benchmark, tests, documentation, and interactive explorer pass the publication gate.
+## What Makes This Different
 
-See [Project Plan](docs/project-plan.md) and [Research Protocol](docs/research-protocol.md).
+- **Paper-to-reproducibility boundary:** the published claim and new execution are visibly separated.
+- **Compute-matched comparison:** the primary RBF-SVC and quantum models receive the same four-component fold-local representation.
+- **Quantum observability:** kernel alignment, eigenvalue spectrum proxies, effective rank, qubit count, and kernel time are retained per fold.
+- **Transportability stress test:** models are trained and tested across four UCI hospital cohorts with sharply different missingness and prevalence.
+- **Probability quality:** calibration, Brier score, threshold errors, and subgroup slices accompany ranking metrics.
+- **No diagnosis theatre:** the public application explores evidence; it never asks for patient details or emits a medical decision.
+- **Traceable outputs:** dataset hashes, seeds, configuration, environment, code revision, and artefact fingerprint are recorded.
+
+## Architecture
+
+![System architecture](docs/architecture.svg)
+
+The Python research engine produces aggregate, patient-safe JSON evidence. The static TypeScript explorer consumes that versioned artefact and can be hosted on GitHub Pages without a clinical prediction API or permanent backend.
+
+## Reproduce the Benchmark
+
+### Requirements
+
+- Python 3.12
+- Node.js 22 and pnpm 11 for the explorer
+- Approximately 2 GB of free environment space
+
+### Setup and data
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install -e '.[dev,quantum]'
+qheart data download --data-dir data
+qheart data profile --data-dir data
+```
+
+The download command retrieves the official CC BY 4.0 UCI archive, blocks unsafe ZIP paths, and writes exact SHA-256 hashes to [`data/manifest.json`](data/manifest.json). Raw patient rows are ignored by Git.
+
+### Execute and verify
+
+```bash
+qheart benchmark \
+  --data-dir data \
+  --config configs/reference.json \
+  --output artifacts/public/results.json \
+  --report reports/results.md
+
+python scripts/sync_explorer_results.py
+ruff check src tests
+mypy src
+pytest --cov=qheart
+```
+
+### Run the explorer
+
+```bash
+cd apps/explorer
+pnpm install --frozen-lockfile
+pnpm test
+pnpm build
+pnpm preview
+```
+
+Open the local address printed by Vite. Select models in the calibration, transportability, and subgroup panels; use the `?` button for the in-app guide.
+
+## Repository Map
+
+```text
+apps/explorer/          TypeScript evidence explorer and browser tests
+artifacts/public/       Aggregate, versioned result artefact
+configs/                Frozen experiment configuration
+data/manifest.json      Dataset source and file hashes; no patient rows
+docs/                   Protocol, data card, model card, architecture, ethics
+reports/results.md      Generated benchmark report
+scripts/                Artefact validation and explorer synchronisation
+src/qheart/             Data, modelling, evaluation, quantum, and reporting code
+tests/                   Unit, integration, determinism, and Qiskit tests
+```
+
+## Evidence and Limitations
+
+The UCI cohorts are small, historical, heterogeneous, and incomplete. Switzerland has a 93.5% positive rate, while Cleveland has a 45.9% positive rate. Missingness ranges from six feature cells in Cleveland to 782 in the Hungarian cohort. Cross-hospital results therefore describe transport stress, not clinical validation.
+
+The quantum kernel is evaluated with an ideal statevector simulator. This demonstrates quantum-feature-map research engineering; it does **not** demonstrate speed-up, hardware advantage, clinical effectiveness, safety, or causal validity.
+
+Read the [Research Protocol](docs/research-protocol.md), [Data Card](docs/data-card.md), [Model Card](docs/model-card.md), and [Responsible-Use Statement](docs/responsible-use.md) before interpreting the results.
+
+## Attribution and Licence
+
+The software is available under the [MIT Licence](LICENSE). The UCI Heart Disease dataset is separately licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) and must be attributed to its original creators. See [`CITATION.cff`](CITATION.cff) for software and paper citation metadata.
 
 ## Responsible-Use Notice
 
-This software is for research, education, and portfolio demonstration only. It must not be used to diagnose disease, make treatment decisions, or replace qualified medical judgement. The underlying datasets are small, historical, heterogeneous, and unsuitable for unvalidated clinical deployment.
-
+This software is for research, education, and portfolio demonstration only. It must not be used to diagnose disease, select treatment, assess an identifiable person, or replace qualified medical judgement.

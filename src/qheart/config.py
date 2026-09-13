@@ -60,4 +60,3 @@ class ExperimentConfig:
     def fingerprint(self) -> str:
         canonical = json.dumps(self.to_dict(), sort_keys=True, separators=(",", ":"))
         return hashlib.sha256(canonical.encode()).hexdigest()[:16]
-

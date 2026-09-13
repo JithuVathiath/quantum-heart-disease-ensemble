@@ -23,4 +23,3 @@ pnpm test:e2e
 ```
 
 Changes to displayed metrics must include the configuration fingerprint, output fingerprint, environment record, and an explanation in the pull request.
-

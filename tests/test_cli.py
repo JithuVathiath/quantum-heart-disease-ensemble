@@ -35,4 +35,3 @@ def test_benchmark_command(monkeypatch, capsys, tmp_path) -> None:
     )
     assert result == 0
     assert "abc123" in capsys.readouterr().out
-

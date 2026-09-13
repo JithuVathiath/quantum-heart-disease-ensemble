@@ -34,4 +34,3 @@ explorer-test:
 	$(PNPM) --dir apps/explorer test:e2e
 
 all: test benchmark sync explorer-build explorer-test
-

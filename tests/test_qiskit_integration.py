@@ -21,4 +21,3 @@ def test_official_qiskit_kernel_is_symmetric_and_bounded() -> None:
     assert np.allclose(matrix, matrix.T)
     assert np.allclose(np.diag(matrix), 1.0)
     assert np.all((matrix >= -1e-9) & (matrix <= 1 + 1e-9))
-

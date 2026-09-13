@@ -111,4 +111,3 @@ def _round_nested(value: Any) -> Any:
     if isinstance(value, list):
         return [_round_nested(item) for item in value]
     return value
-

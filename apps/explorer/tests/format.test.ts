@@ -19,4 +19,3 @@ describe("display formatting", () => {
     expect(shortHash("1234567890abcdef")).toBe("1234567890ab");
   });
 });
-

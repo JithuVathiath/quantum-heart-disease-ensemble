@@ -206,4 +206,3 @@ def benchmark_quantum(frame: pd.DataFrame, config: ExperimentConfig) -> QuantumO
     if any(np.isnan(scores).any() for scores in probabilities.values()):
         raise RuntimeError("Quantum out-of-fold predictions are incomplete")
     return QuantumOofResult(probabilities, fold_records, diagnostics, runtimes)
-

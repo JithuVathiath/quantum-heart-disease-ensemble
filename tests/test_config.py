@@ -30,4 +30,3 @@ def test_configuration_round_trip_and_fingerprint(tmp_path) -> None:
 def test_invalid_configuration_is_rejected(kwargs, message) -> None:
     with pytest.raises(ValueError, match=message):
         ExperimentConfig(**kwargs)
-

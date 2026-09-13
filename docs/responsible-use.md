@@ -26,4 +26,3 @@ Do not use this repository to diagnose or screen a person, recommend treatment o
 ## Reporting Concerns
 
 Open a GitHub issue for reproducibility errors, misleading wording, data-attribution problems, accessibility defects, or security concerns that do not expose private information. Use the private process in [`../SECURITY.md`](../SECURITY.md) for vulnerabilities.
-
