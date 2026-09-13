@@ -30,13 +30,13 @@ All results below were generated independently from the declared reference proto
 
 | Model | Track | ROC AUC (95% CI) | Balanced Accuracy | Brier | Runtime |
 | --- | --- | ---: | ---: | ---: | ---: |
-| Logistic regression | Classical | **0.895** (0.858-0.928) | 0.809 | **0.129** | 0.04 s |
-| Extra Trees | Classical | 0.893 (0.858-0.926) | **0.821** | 0.132 | 0.88 s |
-| RBF-SVC, full representation | Classical | 0.881 (0.838-0.916) | 0.813 | 0.136 | 0.06 s |
-| Gradient boosting | Classical | 0.869 (0.825-0.908) | 0.784 | 0.155 | 1.59 s |
-| RBF-SVC, four components | Matched classical | 0.856 (0.811-0.897) | 0.785 | 0.152 | 0.06 s |
-| Bagged quantum-kernel SVC | Quantum | 0.661 (0.605-0.721) | 0.598 | 0.235 | 1.63 s |
-| Quantum-kernel SVC | Quantum | 0.647 (0.586-0.710) | 0.596 | 0.232 | 1.54 s |
+| Logistic regression | Classical | **0.895** (0.858-0.928) | 0.809 | **0.129** | 0.06 s |
+| Extra Trees | Classical | 0.893 (0.858-0.926) | **0.821** | 0.132 | 0.95 s |
+| RBF-SVC, full representation | Classical | 0.881 (0.838-0.916) | 0.813 | 0.136 | 0.10 s |
+| Gradient boosting | Classical | 0.869 (0.825-0.908) | 0.784 | 0.155 | 2.31 s |
+| RBF-SVC, four components | Matched classical | 0.856 (0.811-0.897) | 0.785 | 0.152 | 0.07 s |
+| Bagged quantum-kernel SVC | Quantum | 0.661 (0.605-0.721) | 0.598 | 0.235 | 1.80 s |
+| Quantum-kernel SVC | Quantum | 0.647 (0.586-0.710) | 0.596 | 0.232 | 1.72 s |
 
 Values are five-fold out-of-fold estimates on 303 Cleveland records. Intervals use 1,000 deterministic bootstrap resamples. Runtime is environment-specific and includes kernel construction for quantum models.
 
