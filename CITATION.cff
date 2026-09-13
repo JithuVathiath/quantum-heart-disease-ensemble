@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both this repository and the associated paper."
+title: "Quantum-Enhanced Heart Disease Ensemble"
+type: software
+authors:
+  - family-names: "Biju"
+    given-names: "Jithu Vathiath"
+version: 0.1.0
+date-released: 2026-09-13
+license: MIT
+repository-code: "https://github.com/JithuVathiath/quantum-heart-disease-ensemble"
+references:
+  - type: conference-paper
+    title: "Prediction of Cardiac Disease Using Quantum Enhanced Ensemble Learning Approach"
+    authors:
+      - family-names: "Biju"
+        given-names: "Jithu Vathiath"
+      - family-names: "Mallya"
+        given-names: "Adithya P."
+      - family-names: "Kirubanantham"
+        given-names: "P."
+    year: 2025
+    doi: "10.1109/ICITIIT64777.2025.11041018"
+

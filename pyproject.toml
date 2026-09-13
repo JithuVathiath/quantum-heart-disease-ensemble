@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantum-heart-disease-ensemble"
+version = "0.1.0"
+description = "Reproducible classical and quantum-kernel benchmarking for the UCI Heart Disease cohorts."
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+license = {text = "MIT"}
+authors = [{name = "Jithu Vathiath Biju"}]
+keywords = ["quantum-machine-learning", "heart-disease", "qsvc", "reproducibility"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy>=2.0,<3",
+  "pandas>=2.2,<3",
+  "scikit-learn>=1.6,<1.8",
+  "scipy>=1.13,<2",
+]
+
+[project.optional-dependencies]
+quantum = [
+  "qiskit>=2.2,<3",
+  "qiskit-machine-learning>=0.9,<0.10",
+]
+dev = [
+  "mypy>=1.15,<2",
+  "pandas-stubs>=2.2,<3",
+  "pytest>=8.3,<9",
+  "pytest-cov>=6,<8",
+  "ruff>=0.11,<1",
+]
+
+[project.scripts]
+qheart = "qheart.cli:main"
+
+[project.urls]
+Paper = "https://doi.org/10.1109/ICITIIT64777.2025.11041018"
+Dataset = "https://doi.org/10.24432/C52P4X"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q --strict-markers --disable-warnings"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["qheart"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 85
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unreachable = true
+
+[[tool.mypy.overrides]]
+module = ["sklearn.*", "qiskit.*", "qiskit_machine_learning.*"]
+ignore_missing_imports = true

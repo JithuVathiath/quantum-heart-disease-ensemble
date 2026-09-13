@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="720" viewBox="0 0 1400 720" role="img" aria-labelledby="title desc">
+  <title id="title">Quantum Heart system architecture</title>
+  <desc id="desc">Flow from licensed UCI cohorts through validation, classical and quantum benchmark tracks, aggregate evidence, and the public explorer.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f4efe6}.navy{fill:#112c35}.paper{fill:#fffaf1}.teal{fill:#14766d}.coral{fill:#e36f55}.yellow{fill:#e5ba58}.line{stroke:#9fa7a5;stroke-width:2;fill:none}.dash{stroke-dasharray:8 8}.h{font:500 34px Georgia,serif;fill:#17242b}.k{font:800 13px Arial,sans-serif;letter-spacing:2px;fill:#14766d}.t{font:500 20px Georgia,serif;fill:#17242b}.s{font:400 14px Arial,sans-serif;fill:#627078}.light{fill:#f9f2e7}.mutedlight{fill:#b9c5c2}.mono{font:700 12px monospace;fill:#17242b}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0L10 3L0 6z" fill="#9fa7a5"/></marker>
+  </defs>
+  <rect class="bg" width="1400" height="720"/>
+  <text class="k" x="70" y="70">REPRODUCIBLE EVIDENCE PIPELINE</text>
+  <text class="h" x="70" y="116">From Licensed Records to Public, Traceable Evidence</text>
+  <g transform="translate(70 180)">
+    <rect class="paper" width="250" height="410" rx="20" stroke="#c9c2b7"/>
+    <circle class="yellow" cx="45" cy="48" r="8"/><text class="k" x="67" y="53">DATA FOUNDATION</text>
+    <text class="t" x="30" y="105">UCI Heart Disease</text><text class="s" x="30" y="132">DOI 10.24432/C52P4X</text>
+    <g transform="translate(30 170)"><rect class="teal" width="190" height="42" rx="8"/><text class="light" x="18" y="27" font-family="Arial" font-size="14">Cleveland · 303</text></g>
+    <g transform="translate(30 224)"><rect fill="#b9d7ca" width="190" height="42" rx="8"/><text class="t" x="18" y="27" font-size="14">Hungarian · 294</text></g>
+    <g transform="translate(30 278)"><rect fill="#b9d7ca" width="190" height="42" rx="8"/><text class="t" x="18" y="27" font-size="14">Switzerland · 123</text></g>
+    <g transform="translate(30 332)"><rect fill="#b9d7ca" width="190" height="42" rx="8"/><text class="t" x="18" y="27" font-size="14">Long Beach VA · 200</text></g>
+  </g>
+  <path class="line" marker-end="url(#arrow)" d="M320 385H380"/>
+  <g transform="translate(380 180)">
+    <rect class="paper" width="260" height="410" rx="20" stroke="#c9c2b7"/>
+    <circle class="yellow" cx="45" cy="48" r="8"/><text class="k" x="67" y="53">VALIDATION</text>
+    <text class="t" x="30" y="105">Fold-Local Controls</text>
+    <g class="s"><text x="30" y="155">01 · Schema and checksums</text><text x="30" y="195">02 · Stratified outer folds</text><text x="30" y="235">03 · Impute and encode</text><text x="30" y="275">04 · Scale and reduce</text><text x="30" y="315">05 · Bootstrap uncertainty</text><text x="30" y="355">06 · Subgroup support rules</text></g>
+  </g>
+  <path class="line" marker-end="url(#arrow)" d="M640 300H700"/><path class="line" marker-end="url(#arrow)" d="M640 472H700"/>
+  <g transform="translate(700 180)">
+    <rect class="navy" width="300" height="186" rx="20"/><text class="k" x="30" y="43" fill="#e5ba58">CLASSICAL TRACK</text><text class="t light" x="30" y="85">Five Baselines</text><text class="s mutedlight" x="30" y="118">Logistic · RBF-SVC · Trees</text><text class="s mutedlight" x="30" y="145">Boosting · Matched 4D RBF</text>
+    <rect class="navy" y="224" width="300" height="186" rx="20"/><text class="k" x="30" y="267" fill="#e5ba58">QUANTUM TRACK</text><text class="t light" x="30" y="309">Qiskit Fidelity Kernel</text><text class="s mutedlight" x="30" y="342">4 qubits · ZZ feature map</text><text class="s mutedlight" x="30" y="369">Single + 7-member bagging</text>
+  </g>
+  <path class="line" marker-end="url(#arrow)" d="M1000 385H1060"/>
+  <g transform="translate(1060 180)">
+    <rect class="paper" width="270" height="410" rx="20" stroke="#c9c2b7"/>
+    <circle class="coral" cx="45" cy="48" r="8"/><text class="k" x="67" y="53">PUBLIC OUTPUT</text>
+    <text class="t" x="30" y="105">Evidence Explorer</text><text class="s" x="30" y="134">No patient prediction API</text>
+    <g transform="translate(30 170)"><rect fill="#e8dfd0" width="210" height="54" rx="8"/><text class="mono" x="16" y="23">results.json</text><text class="s" x="16" y="42" font-size="11">aggregate + fingerprinted</text></g>
+    <g transform="translate(30 240)"><rect fill="#e8dfd0" width="210" height="54" rx="8"/><text class="mono" x="16" y="23">results.md</text><text class="s" x="16" y="42" font-size="11">generated evidence report</text></g>
+    <g transform="translate(30 310)"><rect class="coral" width="210" height="54" rx="8"/><text class="light" x="16" y="32" font-family="Arial" font-size="14">Interactive GitHub Pages</text></g>
+  </g>
+  <path class="line dash" d="M380 630H1000"/><text class="s" x="690" y="665">Every result carries data hash · seed · configuration · environment · code revision</text>
+</svg>
+
